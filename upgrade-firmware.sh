@@ -18,7 +18,7 @@ hp_pkgs+=("firmware-nic-intel")
 hp_pkgs+=("$(dnf search $hp_ilo | awk '/firmware-ilo/{print $1}')")
 
 echo "Downloading firmware packages"
-dnf install -y ${hp_pkgs[@]}
+dnf install --disablerepo="*" --enablerepo="hpe-fwpp" -y ${hp_pkgs[@]}
 
 echo "Staging firmware upgrade"
 yes | smartupdate upgrade --ignore-warnings --cleanup_onexit
