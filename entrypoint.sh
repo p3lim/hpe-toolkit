@@ -12,6 +12,11 @@ else
 	echo "$FWPP_TOKEN" > /etc/dnf/vars/fwpptoken
 fi
 
+# support proxies
+if [[ -n "$PROXY" ]]; then
+	echo "proxy=$PROXY" >> /etc/dnf/dnf.conf
+fi
+
 # shorthand for firmware upgrades
 if [[ "${1,,}" = "upgrade" ]]; then
 	if [[ -z "$FWPP_TOKEN" ]]; then
