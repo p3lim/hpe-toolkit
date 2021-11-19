@@ -8,6 +8,7 @@ on:
       - 'Containerfile'
       - '**.repo'
       - 'entrypoint.sh'
+      - 'upgrade.sh'
 
 jobs:
   build:

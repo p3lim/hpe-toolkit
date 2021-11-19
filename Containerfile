@@ -19,6 +19,9 @@ RUN dnf install -y \
 # FWPP repo, contains firmware packages
 COPY hpe-fwpp.repo /etc/yum.repos.d/
 
+# upgrade script
+COPY --chmod=0755 upgrade-firmware.sh /
+
 # copy entrypoint and make it executable
 COPY --chmod=0755 entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]

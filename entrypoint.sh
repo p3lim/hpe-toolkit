@@ -12,4 +12,9 @@ fi
 # write the FWPP token to dnf vars so the repo can read it
 echo "$FWPP_TOKEN" > /etc/dnf/vars/fwpptoken
 
+# shorthand for firmware upgrades
+if [[ "${1,,}" = "upgrade" ]]; then
+	bash /upgrade-firmware.sh
+fi
+
 exec "$@"
