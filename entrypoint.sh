@@ -6,6 +6,7 @@ if [[ -z "$FWPP_TOKEN" ]]; then
 	exit 1
 fi
 
+# write the FWPP token to dnf vars so the repo can read it
 echo "$FWPP_TOKEN" > /etc/dnf/vars/fwpptoken
 
 exec "$@"
