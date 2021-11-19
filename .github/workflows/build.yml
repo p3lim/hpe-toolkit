@@ -3,7 +3,12 @@ name: build
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
+    paths:
+      - 'Containerfile'
+      - '**.repo'
+      - 'entrypoint.sh'
+
 jobs:
   build:
     runs-on: ubuntu-latest
