@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [[ -z "$FWPP_TOKEN" ]]; then
 	echo "Missing envvar 'FWPP_TOKEN', required to authenticate with FWPP repo."
 	echo "https://downloads.linux.hpe.com/sdr/project/fwpp/"
