@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# exit on errors
 set -e
 
 if [[ -z "$FWPP_TOKEN" ]]; then
