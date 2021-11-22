@@ -15,7 +15,7 @@ hp_pkgs+=("$(dnf search $hp_system | awk '/firmware-system/{print $1}')")
 hp_pkgs+=("$(dnf search $hp_disk | awk '/firmware-hdd/{print $1}')")
 hp_pkgs+=("$(dnf search $hp_raid | awk '/firmware-smartarray/{print $1}')")
 hp_pkgs+=("firmware-nic-intel")
-hp_pkgs+=("$(dnf search $hp_ilo | awk '/firmware-ilo/{print $1}')")
+hp_pkgs+=("$(dnf search $hp_ilo | awk '/firmware-ilo/{print $1}' | grep -v sha512)")
 
 echo "Downloading firmware packages"
 dnf install --disablerepo="*" --enablerepo="hpe-fwpp" -y ${hp_pkgs[@]}
