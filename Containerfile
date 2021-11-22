@@ -14,10 +14,10 @@ RUN dnf install -y \
             ssacli \
             openssl \
             findutils \
- && dnf clean all \
  && rm -rf /var/cache/yum \
            /yum.repos.d/hpe-spp.repo \
-           /yum.repos.d/hpe-sum.repo
+           /yum.repos.d/hpe-sum.repo \
+ && dnf clean all
 
 # FWPP repo, contains firmware packages
 COPY hpe-fwpp.repo /etc/yum.repos.d/
