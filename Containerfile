@@ -5,12 +5,15 @@ COPY hpe-spp.repo /etc/yum.repos.d/
 # SUM repo, contains smartupdate
 COPY hpe-sum.repo /etc/yum.repos.d/
 
-# install smartupdate, hponcfg and ssacli (and openssl, required by hponcfg)
+# install smartupdate, hponcfg and ssacli
+# openssl is required for hponcfg
+# find is required for smartupdate
 RUN dnf install -y \
             sum \
             hponcfg \
             ssacli \
             openssl \
+            findutils \
  && dnf clean all \
  && rm -rf /var/cache/yum \
            /yum.repos.d/hpe-spp.repo \
