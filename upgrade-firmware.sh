@@ -26,3 +26,4 @@ echo "Staging firmware upgrade"
 yes | smartupdate upgrade --ignore-warnings --cleanup_onexit
 
 echo "Firmware staged, please reboot host to apply"
+
