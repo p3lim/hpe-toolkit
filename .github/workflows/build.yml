@@ -8,7 +8,7 @@ on:
       - 'Containerfile'
       - '**.repo'
       - 'entrypoint.sh'
-      - 'upgrade.sh'
+      - 'upgrade-firmware.sh'
 
 jobs:
   build:
