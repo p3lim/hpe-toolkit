@@ -15,8 +15,8 @@ RUN dnf install -y \
             openssl \
             findutils \
  && rm -rf /var/cache/yum \
-           /yum.repos.d/hpe-spp.repo \
-           /yum.repos.d/hpe-sum.repo \
+           /etc/yum.repos.d/hpe-spp.repo \
+           /etc/yum.repos.d/hpe-sum.repo \
  && dnf clean all
 
 # FWPP repo, contains firmware packages
