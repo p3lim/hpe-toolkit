@@ -12,6 +12,7 @@ RUN dnf install -y \
             sum \
             hponcfg \
             ssacli \
+            ssaducli \
             openssl \
             findutils \
  && rm -rf /var/cache/yum \
