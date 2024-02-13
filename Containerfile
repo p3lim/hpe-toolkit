@@ -1,4 +1,4 @@
-FROM docker.io/rockylinux/rockylinux:8.5
+FROM docker.io/rockylinux/rockylinux:8.9
 
 # SPP repo, contains ssacli and hponcfg
 COPY hpe-spp.repo /etc/yum.repos.d/
